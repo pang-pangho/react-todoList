@@ -1,0 +1,95 @@
+.item-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+.item-li:hover {
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+.item-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  height: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10.25rem;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+}
+.item {
+  padding-left: 1.255rem;
+}
+.input-edit {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  cursor: text;
+}
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* 아이콘과 체크박스 정렬 */
+  font-size: 1.25rem;
+  padding-right: 1.25rem;
+}
+.icon-container {
+  display: flex;
+  align-items: center; /* 아이콘과 체크박스 정렬 */
+}
+.checked {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+.custom-checkbox-wrapper {
+  position: relative;
+  display: flex; /* 아이콘과 체크박스 정렬 */
+  align-items: center; /* 아이콘과 체크박스 정렬 */
+  margin-right: 1rem; /* 아이콘과의 간격 조절 */
+}
+
+.custom-checkbox {
+  visibility: hidden;
+}
+
+.custom-checkbox-label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label::after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
